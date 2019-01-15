@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+    <label>
+        <input type="text" name="textfield" id="text1" pixel ="10"/>
+    </label>
+    <label>
+        <input type="button" name="Tính số ngày" pixel ="8" value="Tính số ngày" onclick="tinh();"/>
+    </label>
+
+</form>
+<script>
+    function tinh(){
+        var nhap = document.getElementById("text1").value;
+        var nhapvalue = parseInt(nhap);
+        var ketqua ;
+
+        switch(nhapvalue)
+        {
+            case 2:
+                ketqua =alert('Tháng 2 có 28 ngày hoặc 29 ngày');
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 9:
+            case 11:
+                ketqua =alert('Tháng '+nhap +' có 31 ngày');
+                break;
+            case 4:
+            case 6:
+            case 8:
+            case 10:
+            case 12:
+                ketqua =alert('Tháng '+ nhap+' có 30 ngày');
+                break;
+        }
+    }
+</script>
+
+</body>
+</html>
